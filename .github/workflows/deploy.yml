@@ -3,7 +3,13 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
-  workflow_dispatch: # 手動実行を可能にする
+  workflow_dispatch:
+
+# 権限の設定を追加
+permissions:
+  contents: write
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -25,7 +31,7 @@ jobs:
         run: flutter pub get
 
       - name: Build
-        run: flutter build web --release
+        run: flutter build web --release --base-href "/flutter-fortune/"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -33,3 +39,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/web
           commit_message: "Deploy to GitHub Pages"
+          force_orphan: true # 履歴をクリーンに保つ

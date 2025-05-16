@@ -1,0 +1,34 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "田中太郎",
+      "image": "assets/images/character1.png",
+      "description": "明るく前向きな性格の主人公"
+    },
+    {
+      "id": 2,
+      "name": "佐藤花子",
+      "image": "assets/images/character2.png",
+      "description": "冷静で知的な女性"
+    },
+    {
+      "id": 3,
+      "name": "鈴木一郎",
+      "image": "assets/images/character3.png",
+      "description": "情熱的な冒険家"
+    },
+    {
+      "id": 4,
+      "name": "山田美咲",
+      "image": "assets/images/character4.png",
+      "description": "芸術的な感性の持ち主"
+    },
+    {
+      "id": 5,
+      "name": "伊藤健太",
+      "image": "assets/images/character5.png",
+      "description": "努力家で誠実な青年"
+    }
+  ]
+}
